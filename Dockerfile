@@ -29,3 +29,9 @@ RUN apt-get -y install \
     texlive-xetex \
     texlive-math-extra \
     texlive-latex-extra
+
+ADD install_click.sh /tmp/install_click.sh
+RUN /tmp/install_click.sh
+
+ADD install_libsodium.sh /tmp/install_libsodium.sh
+RUN /tmp/install_libsodium.sh
