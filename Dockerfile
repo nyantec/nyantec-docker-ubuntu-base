@@ -7,6 +7,7 @@ RUN apt-get -qq update; \
     apt-get -qq update
 
 RUN apt-get -y install \
+    curl \
     wget \
     make \
     autoconf \
@@ -35,3 +36,6 @@ RUN /tmp/install_click.sh
 
 ADD install_libsodium.sh /tmp/install_libsodium.sh
 RUN /tmp/install_libsodium.sh
+
+ADD install_rust.sh /tmp/install_rust.sh
+RUN /tmp/install_rust.sh
