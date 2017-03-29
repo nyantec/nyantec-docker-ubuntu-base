@@ -7,6 +7,9 @@ RUN apt-get -qq update; \
     apt-get -qq update
 
 RUN apt-get -y install \
+    libsystemd-dev \
+    libssl-dev \
+    libsnmp-dev \
     curl \
     wget \
     make \
