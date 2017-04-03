@@ -32,7 +32,8 @@ RUN apt-get -y install \
     texlive-luatex \
     texlive-xetex \
     texlive-math-extra \
-    texlive-latex-extra
+    texlive-latex-extra \
+    lua5.2
 
 ADD install_click.sh /tmp/install_click.sh
 RUN /tmp/install_click.sh
