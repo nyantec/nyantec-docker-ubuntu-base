@@ -7,15 +7,12 @@ RUN apt-get -qq update; \
     apt-get -qq update
 
 RUN apt-get -y install \
+    build-essential \
     libsystemd-dev \
     libssl-dev \
     libsnmp-dev \
     curl \
     wget \
-    make \
-    autoconf \
-    automake \
-    g++ \
     git \
     python3-pip \
     pkg-config \
@@ -33,7 +30,9 @@ RUN apt-get -y install \
     texlive-xetex \
     texlive-math-extra \
     texlive-latex-extra \
-    lua5.2
+    graphviz \
+    lua5.2 \
+    xterm
 
 ADD install_click.sh /tmp/install_click.sh
 RUN /tmp/install_click.sh
