@@ -19,6 +19,7 @@ wget "${CLICK_PKG_URL}" --quiet -O - | tar -xz -C ${CLICK_TMPDIR}
   cd ${CLICK_TMPDIR}/click-* &&
   ./configure \
       --disable-linuxmodule \
+      --enable-etherswitch=yes \
       --enable-user-multithread=yes \
       --enable-ip6 \
       --prefix="${CLICK_PREFIX}" &&
