@@ -1,13 +1,17 @@
 #!/bin/bash
 set -ue
 
+# FIXME this script is only required since ubuntu 14.0 has an old rustc that
+# gives parse errors on .toml files. Once we're dropping support for ubuntu14,
+# this file should be removed and the rustc package added to packages_apt.txt
+# instead (rustc from later ubuntu versions will work fine)
+
 : ${RUST_TMPDIR:=/tmp/rust_install}
 : ${RUST_PKG_URL:="https://static.rust-lang.org/dist/rust-1.16.0-x86_64-unknown-linux-gnu.tar.gz"}
 : ${RUST_PREFIX:="/usr/local"}
 
 if which rustc &> /dev/null; then
-  echo 0
-  #exit 0 # rust already installed
+  exit 0 # rust already installed
 fi
 
 if [[ -z ${RUST_TMPDIR} || ${#RUST_TMPDIR} -lt 3 ]]; then
