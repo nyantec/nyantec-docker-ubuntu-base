@@ -11,6 +11,7 @@ RUN apt-get -y install \
     autoconf-archive \
     automake \
     build-essential \
+    cabal-install \
     chrpath \
     clang-format-3.8 \
     cppcheck \
@@ -25,6 +26,7 @@ RUN apt-get -y install \
     ghostscript \
     git \
     graphviz \
+    happy \
     inkscape \
     libdbus-1-dev \
     libglib2.0-dev \
